@@ -80,13 +80,13 @@ const Checkout = () => {
   }
 
   return orderId ? (
-    <main className="flex min-h-[calc(100vh-80px)] items-center justify-center bg-[#0e0e0e] px-6 py-16 text-white">
-      <section className="w-full max-w-2xl border border-[#2f281f] bg-[#151412] px-8 py-12 text-center shadow-[0_24px_70px_rgba(0,0,0,0.35)] sm:px-14 sm:py-16">
+    <main className="flex min-h-[calc(100vh-80px)] items-center justify-center bg-[#0e0e0e] px-4 py-12 text-white sm:px-6 sm:py-16">
+      <section className="w-full max-w-2xl border border-[#2f281f] bg-[#151412] px-5 py-10 text-center shadow-[0_24px_70px_rgba(0,0,0,0.35)] sm:px-14 sm:py-16">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#f2ca50] text-2xl text-[#f2ca50]">
           <i className="bi bi-check-lg"></i>
         </div>
 
-        <h1 className="mt-7 font-[Playfair_Display] text-4xl font-bold sm:text-5xl">
+        <h1 className="mt-7 font-[Playfair_Display] text-3xl font-bold sm:text-5xl">
           Gracias por tu compra
         </h1>
 
@@ -106,18 +106,18 @@ const Checkout = () => {
 
         <Link
           to="/"
-          className="mt-8 inline-block bg-[#f2ca50] px-8 py-4 font-[Inter] text-[11px] font-bold tracking-[0.2em] text-black uppercase transition-all duration-300 hover:-translate-y-1 hover:bg-[#ffd65d]"
+          className="mt-8 inline-block bg-[#f2ca50] px-6 py-4 font-[Inter] text-[11px] font-bold tracking-[0.2em] text-black uppercase transition-all duration-300 hover:-translate-y-1 hover:bg-[#ffd65d] sm:px-8"
         >
           Volver al inicio
         </Link>
       </section>
     </main>
   ) : (
-    <main className="min-h-[calc(100vh-80px)] bg-[#0e0e0e] px-6 py-14 text-white">
+    <main className="min-h-[calc(100vh-80px)] bg-[#0e0e0e] px-4 py-10 text-white sm:px-6 sm:py-14">
       <section className="mx-auto grid max-w-5xl overflow-hidden border border-[#2f281f] bg-[#151412] shadow-[0_24px_70px_rgba(0,0,0,0.35)] lg:grid-cols-[0.8fr_1.2fr]">
-        <aside className="relative overflow-hidden bg-[#1b1814] p-8 sm:p-12">
+        <aside className="relative overflow-hidden bg-[#1b1814] p-5 sm:p-12">
           <div className="relative">
-            <h1 className="font-[Playfair_Display] text-4xl leading-tight font-bold sm:text-5xl">
+            <h1 className="font-[Playfair_Display] text-3xl leading-tight font-bold sm:text-5xl">
               Finaliza tu compra
             </h1>
             <p className="mt-6 font-[Inter] text-sm leading-7 text-[#c8bdab]">
@@ -137,9 +137,9 @@ const Checkout = () => {
           </div>
         </aside>
 
-        <div className="p-8 sm:p-12">
+        <div className="p-5 sm:p-12">
           <header className="border-b border-[#30291f] pb-7">
-            <h2 className="font-[Playfair_Display] text-3xl font-bold">
+            <h2 className="font-[Playfair_Display] text-2xl font-bold break-words sm:text-3xl">
               Información personal
             </h2>
           </header>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Item = ({ product }) => {
   return (
-    <div className="group w-full max-w-[260px] cursor-pointer">
+    <div className="group w-full max-w-[320px] cursor-pointer sm:max-w-[260px]">
       <div className="relative mb-5 flex h-[255px] items-center justify-center overflow-hidden bg-[#120f0d] px-6 pt-8 pb-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(198,138,90,0.28),transparent_24%),linear-gradient(180deg,rgba(0,0,0,0.14)_0%,rgba(0,0,0,0.48)_100%)]"></div>
         <div className="absolute bottom-0 left-0 h-[56px] w-full bg-[repeating-linear-gradient(180deg,rgba(134,88,59,0.22)_0px,rgba(134,88,59,0.22)_2px,rgba(55,35,24,0.18)_2px,rgba(55,35,24,0.18)_6px)]"></div>

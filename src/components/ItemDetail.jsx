@@ -16,16 +16,16 @@ const ItemDetail = ({ detail }) => {
   };
 
   return (
-    <main className="min-h-[calc(100vh-80px)] bg-[#0e0e0e] px-6 py-14 text-white">
-      <section className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+    <main className="min-h-[calc(100vh-80px)] bg-[#0e0e0e] px-4 py-9 text-white sm:px-6 sm:py-14">
+      <section className="mx-auto grid max-w-6xl gap-9 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-12">
         <div>
-          <div className="relative flex min-h-[420px] items-center justify-center overflow-hidden bg-[#11100f] px-10 py-14 shadow-[0_22px_60px_rgba(0,0,0,0.35)]">
+          <div className="relative flex min-h-[300px] items-center justify-center overflow-hidden bg-[#11100f] px-6 py-10 shadow-[0_22px_60px_rgba(0,0,0,0.35)] sm:min-h-[420px] sm:px-10 sm:py-14">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(60,92,85,0.28),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.08)_0%,rgba(0,0,0,0.56)_100%)]"></div>
             <div className="absolute bottom-0 left-0 h-[96px] w-full bg-[repeating-linear-gradient(180deg,rgba(128,78,47,0.38)_0px,rgba(128,78,47,0.38)_3px,rgba(45,27,18,0.32)_3px,rgba(45,27,18,0.32)_9px)]"></div>
             <div className="absolute bottom-[74px] left-1/2 h-8 w-[68%] -translate-x-1/2 rounded-full bg-black/45 blur-lg"></div>
 
             <img
-              className="relative z-10 h-[270px] w-[270px] object-cover shadow-[0_4px_10px_rgba(0,0,0,0.22),0_24px_40px_rgba(0,0,0,0.46)]"
+              className="relative z-10 h-auto w-full max-w-[230px] object-cover shadow-[0_4px_10px_rgba(0,0,0,0.22),0_24px_40px_rgba(0,0,0,0.46)] sm:h-[270px] sm:w-[270px]"
               src={detail.img}
               alt={detail.nombre}
             />
@@ -47,7 +47,7 @@ const ItemDetail = ({ detail }) => {
             {detail.categoria}
           </p>
 
-          <h1 className="font-[Playfair_Display] text-5xl leading-[0.95] font-bold text-white md:text-6xl">
+          <h1 className="font-[Playfair_Display] text-4xl leading-[1] font-bold break-words text-white sm:text-5xl md:text-6xl md:leading-[0.95]">
             {detail.nombre}
           </h1>
 
@@ -64,7 +64,7 @@ const ItemDetail = ({ detail }) => {
             </span>
           </div>
 
-          <dl className="mt-8 grid grid-cols-2 gap-x-10 gap-y-6 font-[Inter]">
+          <dl className="mt-8 grid grid-cols-1 gap-x-10 gap-y-6 font-[Inter] min-[420px]:grid-cols-2">
             <div>
               <dt className="text-[10px] font-bold tracking-[0.2em] text-[#f2ca50] uppercase">
                 Formato
@@ -116,13 +116,13 @@ const ItemDetail = ({ detail }) => {
             ) : purchase ? (
               <Link
                 to="/cart"
-                className="bg-[#f2ca50] px-12 py-4 font-[Inter] text-[11px] font-bold tracking-[0.22em] text-black uppercase transition-all duration-300 hover:-translate-y-1 hover:bg-[#ffd65d] hover:shadow-[0_14px_30px_rgba(242,202,80,0.2)]"
+                className="w-full bg-[#f2ca50] px-6 py-4 text-center font-[Inter] text-[11px] font-bold tracking-[0.22em] text-black uppercase transition-all duration-300 hover:-translate-y-1 hover:bg-[#ffd65d] hover:shadow-[0_14px_30px_rgba(242,202,80,0.2)] sm:w-auto sm:px-12"
               >
                 Ir al carrito
               </Link>
             ) : (
               <>
-                <div className="border border-[#4a382a] px-4 py-2">
+                <div className="flex justify-center border border-[#4a382a] px-4 py-2 sm:block">
                   <ItemCount
                     stock={detail.stock}
                     cont={cont}
@@ -131,7 +131,7 @@ const ItemDetail = ({ detail }) => {
                 </div>
                 <button
                   onClick={onAdd}
-                  className="bg-[#f2ca50] px-12 py-4 font-[Inter] text-[11px] font-bold tracking-[0.22em] text-black uppercase transition-all duration-300 hover:-translate-y-1 hover:bg-[#ffd65d] hover:shadow-[0_14px_30px_rgba(242,202,80,0.2)]"
+                  className="w-full bg-[#f2ca50] px-6 py-4 font-[Inter] text-[11px] font-bold tracking-[0.22em] text-black uppercase transition-all duration-300 hover:-translate-y-1 hover:bg-[#ffd65d] hover:shadow-[0_14px_30px_rgba(242,202,80,0.2)] sm:w-auto sm:px-12"
                 >
                   Agregar al carrito
                 </button>

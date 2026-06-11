@@ -9,7 +9,7 @@ const CartWidget = () => {
   return (
     <Link
       to="/cart"
-      className="relative mr-15 cursor-pointer text-2xl text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:text-[#f2ca50] hover:drop-shadow-[0_0_12px_rgba(242,202,80,0.28)]"
+      className="relative cursor-pointer text-2xl text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:text-[#f2ca50] hover:drop-shadow-[0_0_12px_rgba(242,202,80,0.28)] md:mr-8 lg:mr-15"
       aria-label="Ver carrito"
     >
       <i className="bi bi-cart"></i>

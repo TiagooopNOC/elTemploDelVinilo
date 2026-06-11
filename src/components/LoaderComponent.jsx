@@ -2,7 +2,7 @@ import { SyncLoader } from "react-spinners";
 
 const LoaderComponent = () => {
   return (
-    <main className="flex min-h-[calc(100vh-80px)] flex-col items-center justify-center bg-[#131313] font-[Playfair_Display] text-[48px] text-[#e5e2e1]">
+    <main className="flex min-h-[calc(100vh-80px)] flex-col items-center justify-center bg-[#131313] px-4 font-[Playfair_Display] text-4xl text-[#e5e2e1] sm:text-[48px]">
       <SyncLoader
         color="#f2ca50"
         loading={true}

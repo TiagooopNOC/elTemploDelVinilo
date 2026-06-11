@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Error = () => {
   return (
-    <main className="flex min-h-[calc(100vh-80px)] items-center justify-center bg-[#0e0e0e] px-6 py-20">
+    <main className="flex min-h-[calc(100vh-80px)] items-center justify-center bg-[#0e0e0e] px-4 py-14 sm:px-6 sm:py-20">
       <section className="max-w-2xl text-center">
         <div className="mx-auto mb-7 h-[2px] w-20 bg-[#f2ca50]"></div>
 
@@ -10,7 +10,7 @@ const Error = () => {
           Error 404
         </p>
 
-        <h1 className="font-[Playfair_Display] text-5xl leading-tight font-bold text-white md:text-6xl">
+        <h1 className="font-[Playfair_Display] text-4xl leading-tight font-bold text-white sm:text-5xl md:text-6xl">
           Esta pagina no existe
         </h1>
 

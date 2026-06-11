@@ -14,12 +14,12 @@ const CartView = () => {
 
   if (cart.length === 0) {
     return (
-      <main className="min-h-[calc(100vh-80px)] bg-[#101010] px-6 py-16 text-white">
+      <main className="min-h-[calc(100vh-80px)] bg-[#101010] px-4 py-12 text-white sm:px-6 sm:py-16">
         <section className="mx-auto max-w-6xl">
           <p className="font-[Inter] text-[11px] font-bold tracking-[0.22em] text-[#f2ca50] uppercase">
             Carrito
           </p>
-          <h1 className="mt-2 font-[Playfair_Display] text-5xl font-bold">
+          <h1 className="mt-2 font-[Playfair_Display] text-4xl font-bold sm:text-5xl">
             Tu seleccion esta vacia
           </h1>
           <p className="mt-4 max-w-xl font-[Inter] text-sm leading-7 text-[#d0c5af]">
@@ -38,10 +38,10 @@ const CartView = () => {
   }
 
   return (
-    <main className="min-h-[calc(100vh-80px)] bg-[#101010] px-6 py-14 text-white">
+    <main className="min-h-[calc(100vh-80px)] bg-[#101010] px-4 py-10 text-white sm:px-6 sm:py-14">
       <section className="mx-auto max-w-6xl">
         <header className="border-b border-[#25211b] pb-8">
-          <h1 className="font-[Playfair_Display] text-5xl font-bold">
+          <h1 className="font-[Playfair_Display] text-4xl font-bold sm:text-5xl">
             Tu seleccion
           </h1>
           <p className="mt-2 font-[Inter] text-[11px] font-bold tracking-[0.22em] text-[#f2ca50] uppercase">
@@ -49,24 +49,24 @@ const CartView = () => {
           </p>
         </header>
 
-        <section className="grid gap-10 py-10 lg:grid-cols-[1fr_320px]">
+        <section className="grid gap-8 py-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-10 lg:py-10">
           <div className="space-y-8">
             {cart.map((prod) => (
               <article
                 key={prod.id}
-                className="grid gap-5 border-b border-[#25211b] pb-8 sm:grid-cols-[110px_1fr_auto] sm:items-center"
+                className="grid min-w-0 gap-5 border-b border-[#25211b] pb-8 sm:grid-cols-[110px_minmax(0,1fr)_auto] sm:items-center"
               >
                 <img
                   src={prod.img}
                   alt={prod.nombre}
-                  className="h-[110px] w-[110px] object-cover shadow-[0_16px_30px_rgba(0,0,0,0.35)]"
+                  className="h-[110px] w-[110px] object-cover shadow-[0_16px_30px_rgba(0,0,0,0.35)] max-sm:h-auto max-sm:w-full max-sm:max-w-[180px]"
                 />
 
-                <div>
+                <div className="min-w-0">
                   <p className="font-[Inter] text-[10px] font-bold tracking-[0.18em] text-[#f2ca50] uppercase">
                     {prod.categoria}
                   </p>
-                  <h2 className="mt-1 font-[Playfair_Display] text-3xl leading-none font-bold text-white">
+                  <h2 className="mt-1 font-[Playfair_Display] text-2xl leading-none font-bold break-words text-white sm:text-3xl">
                     {prod.nombre}
                   </h2>
                   <p className="mt-2 font-[Inter] text-sm text-[#d0c5af]">
@@ -106,7 +106,7 @@ const CartView = () => {
                   </p>
                 </div>
 
-                <div className="flex items-center justify-between gap-6 sm:flex-col sm:items-end">
+                <div className="flex min-w-0 items-center justify-between gap-4 sm:flex-col sm:items-end sm:gap-6">
                   <button
                     onClick={() => removeItem(prod.id)}
                     className="cursor-pointer font-[Inter] text-lg text-[#d0c5af] transition-colors hover:text-[#f2ca50]"
@@ -114,7 +114,7 @@ const CartView = () => {
                   >
                     x
                   </button>
-                  <p className="font-[Inter] text-lg font-bold text-[#f2ca50]">
+                  <p className="text-right font-[Inter] text-base font-bold break-words text-[#f2ca50] sm:text-lg">
                     Precio final: U$D {prod.precio * prod.quantity}
                   </p>
                 </div>
@@ -122,7 +122,7 @@ const CartView = () => {
             ))}
           </div>
 
-          <aside className="h-fit bg-[#171614] p-8 shadow-[0_18px_40px_rgba(0,0,0,0.28)]">
+          <aside className="h-fit bg-[#171614] p-5 shadow-[0_18px_40px_rgba(0,0,0,0.28)] sm:p-8">
             <h2 className="font-[Playfair_Display] text-2xl font-bold">
               Resumen de compra
             </h2>
@@ -172,7 +172,7 @@ const CartView = () => {
 
       {showClearModal && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 px-6"
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/80 px-4 py-6 sm:px-6"
           onClick={() => setShowClearModal(false)}
           role="presentation"
         >
@@ -181,7 +181,7 @@ const CartView = () => {
             aria-modal="true"
             aria-labelledby="clear-cart-title"
             onClick={(event) => event.stopPropagation()}
-            className="w-full max-w-lg border border-[#3a3125] bg-[#151412] px-8 py-10 text-center shadow-[0_24px_70px_rgba(0,0,0,0.6)]"
+            className="w-full max-w-lg border border-[#3a3125] bg-[#151412] px-5 py-8 text-center shadow-[0_24px_70px_rgba(0,0,0,0.6)] sm:px-8 sm:py-10"
           >
             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#4a382a] bg-[#11100f] text-xl text-[#f2ca50]">
               <i className="bi bi-trash3"></i>

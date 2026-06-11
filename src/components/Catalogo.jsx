@@ -6,8 +6,10 @@ const Catalogo = () => {
   const title = categoryId || "Nuestro Catalogo";
 
   return (
-    <div className="bg-[#131313] font-[Playfair_Display] text-[48px] text-[#e5e2e1]">
-      <h2 className="p-10">{title}</h2>
+    <div className="bg-[#131313] font-[Playfair_Display] text-[#e5e2e1]">
+      <h2 className="px-5 py-8 text-4xl sm:px-8 sm:text-[42px] lg:p-10 lg:text-[48px]">
+        {title}
+      </h2>
       <ItemListContainer />
     </div>
   );
