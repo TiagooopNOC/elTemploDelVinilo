@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
       .then((res) => {
         setResult({
           requestedId: id,
-          detail: res.exists() ? { id: res.id, ...res.data() } : null,
+          detail: res.exists() ? { ...res.data(), id: res.id } : null,
         });
       })
       .catch((error) => {

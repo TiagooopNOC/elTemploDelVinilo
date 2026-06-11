@@ -20,8 +20,8 @@ const ItemListContainer = () => {
       .then((res) => {
         const list = res.docs.map((doc) => {
           return {
-            id: doc.id,
             ...doc.data(),
+            id: doc.id,
           };
         });
         setResult({ categoryId: categoryId ?? "", products: list });
