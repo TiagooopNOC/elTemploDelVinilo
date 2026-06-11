@@ -8,6 +8,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./components/Error";
 import { CartProvider } from "./context/CartContext";
 import Checkout from "./components/Checkout";
+import Footer from "./components/Footer";
+
 function App() {
   return (
     <BrowserRouter>
@@ -30,6 +32,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />}></Route>
           <Route path="*" element={<Error />} />
         </Routes>
+        <Footer />
       </CartProvider>
     </BrowserRouter>
   );
