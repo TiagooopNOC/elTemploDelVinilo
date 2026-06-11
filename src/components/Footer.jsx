@@ -4,9 +4,6 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const linkClasses =
     "w-fit text-sm text-[#a99f8d] transition-colors duration-300 hover:text-[#f2ca50] focus-visible:text-[#f2ca50] focus-visible:outline-none";
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-  };
 
   return (
     <footer className="border-t border-[#2f281f] bg-[#131313] font-[Inter] text-[#d0c5af]">
@@ -14,7 +11,6 @@ const Footer = () => {
         <div className="max-w-md">
           <Link
             to="/"
-            onClick={scrollToTop}
             className="inline-flex items-center gap-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f2ca50]"
           >
             <img
@@ -37,24 +33,16 @@ const Footer = () => {
             Explorar
           </h2>
           <div className="flex flex-col gap-4">
-            <Link to="/" className={linkClasses} onClick={scrollToTop}>
+            <Link to="/" className={linkClasses}>
               Inicio
             </Link>
-            <Link
-              to="/catalogo"
-              className={linkClasses}
-              onClick={scrollToTop}
-            >
+            <Link to="/catalogo" className={linkClasses}>
               Catálogo completo
             </Link>
-            <Link to="/cart" className={linkClasses} onClick={scrollToTop}>
+            <Link to="/cart" className={linkClasses}>
               Mi carrito
             </Link>
-            <Link
-              to="/checkout"
-              className={linkClasses}
-              onClick={scrollToTop}
-            >
+            <Link to="/checkout" className={linkClasses}>
               Finalizar compra
             </Link>
           </div>
@@ -68,21 +56,18 @@ const Footer = () => {
             <Link
               to="/categoria/Nuevos"
               className={linkClasses}
-              onClick={scrollToTop}
             >
               Nuevos ingresos
             </Link>
             <Link
               to="/categoria/Ofertas"
               className={linkClasses}
-              onClick={scrollToTop}
             >
               Ofertas
             </Link>
             <Link
               to="/categoria/Mas vendidos"
               className={linkClasses}
-              onClick={scrollToTop}
             >
               Más vendidos
             </Link>

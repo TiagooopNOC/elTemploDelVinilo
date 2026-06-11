@@ -9,11 +9,13 @@ import Error from "./components/Error";
 import { CartProvider } from "./context/CartContext";
 import Checkout from "./components/Checkout";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
       <CartProvider>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route
